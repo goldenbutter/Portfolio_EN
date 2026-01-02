@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Portfolio of Bithun Chatterjee — Oracle, SQL, PL/SQL projects and case studies." />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <!-- Favicon (this shows the tab icon) -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph / Social (these do NOT render on page; they are for link previews) -->
   <meta property="og:title" content="Bithun Chatterjee — Portfolio" />
   <meta property="og:description" content="Oracle, SQL, PL/SQL projects, dashboards & case studies." />
   <meta property="og:type" content="website" />
@@ -43,12 +43,28 @@
       background:#123b75; border:1px solid rgba(255,255,255,.1); color:#e9f3ff; font-weight:600; }
     .btn:hover { background:#0f3468; }
     .btn-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+
     .panel { margin-top: 24px; padding: 18px; background: var(--card); border-radius: var(--radius);
       box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.08); }
     .panel h2 { margin-top:0; font-size:1.25rem; }
+
     .pdf-wrap { width: 100%; aspect-ratio: 3/4; border: 1px solid rgba(255,255,255,.1);
       border-radius: 12px; overflow: hidden; background: #0c1528; }
     .pdf-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+    /* Projects */
+    .projects { display:grid; gap:16px; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); }
+    .card {
+      background: #0f1b31; border: 1px solid rgba(255,255,255,.08); border-radius: 14px;
+      padding: 16px; box-shadow: var(--shadow);
+    }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); }
+
+    /* Optional OG image preview (for *on-page* preview only) */
+    .og-preview { margin-top: 10px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); }
+    .og-preview img { display:block; width:100%; height:auto; }
+
     footer { text-align:center; color:var(--muted); margin: 26px 0 10px; }
   </style>
 </head>
@@ -59,7 +75,8 @@
       <img class="avatar" src="assets/avatar.jpg" alt="Photo of Bithun Chatterjee" />
       <div class="meta">
         <h1>Bithun Chatterjee</h1>
-        <p>Senior Technical Consultant — Oracle / SQL / PL/SQL · Data & ETL</p>
+        <p>Senior Technical Consultant — Oracle / SQL / PL/SQL · Data & ETL· DevOps </p>
+
         <div class="chips">
           <span class="chip">Oracle Database</span>
           <span class="chip">SQL & PL/SQL</span>
@@ -67,6 +84,7 @@
           <span class="chip">ETL & Data Pipelines</span>
           <span class="chip">AWS | Azure</span>
         </div>
+
         <div class="btn-row">
           <a class="btn" href="mailto:bithun.chatterjee@gmail.com">Contact</a>
           <a class="btn" href="assets/Bithun.Chatterjee_CV.pdf" target="_blank" rel="noopener">Download CV</a>
@@ -76,11 +94,34 @@
       </div>
     </header>
 
-    <!-- Portfolio PDF -->
+    <!-- Portfolio (embed your resume as portfolio) -->
     <section class="panel">
       <h2>Portfolio</h2>
       <div class="pdf-wrap">
         <iframe src="assets/Resume_Bithun_Chatterjee.pdf#view=fitH" title="Portfolio PDF"></iframe>
+      </div>
+
+      <!-- OPTIONAL: Show OG image on the page (remove if you don't want it visible) -->
+      <div class="og-preview" aria-hidden="true">
+        <img src="assets/og-image.jpg" alt="Social preview of Bithun Chatterjee portfolio" />
+      </div>
+    </section>
+
+    <!-- Projects (placeholder cards you can fill later) -->
+    <section class="panel">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>Cloud‑Native 3‑Tier Web App (AWS EKS, ECR, ALB)</h3>
+          <p>React (Tier 1), Node.js (Tier 2), MongoDB (Tier 3). Docker builds → ECR → EKS, Ingress via ALB, monitored with Prometheus & Grafana.</p>
+        </article>
+
+        <article class="card">
+          <h3>Two‑Tier AWS DevOps Deployment (EC2 + RDS)</h3>
+          <p>App servers behind ALB (public), RDS in private subnet, CI/CD with CodePipeline/CodeDeploy, CloudWatch monitoring & alarms.</p>
+        </article>
+
+        <!-- Add more project cards here as you publish them -->
       </div>
     </section>
 
