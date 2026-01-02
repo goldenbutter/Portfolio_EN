@@ -8,7 +8,7 @@
   <meta name="description" content="Portfolio of Bithun Chatterjee — Oracle, SQL, PL/SQL projects and case studies." />
 
   <!-- Favicon -->
-  assets/favicon.png
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Bithun Chatterjee — Portfolio" />
@@ -51,13 +51,8 @@
     .pdf-wrap { width: 100%; aspect-ratio: 3/4; border: 1px solid rgba(255,255,255,.1);
       border-radius: 12px; overflow: hidden; background: #0c1528; }
     .pdf-wrap iframe { width: 100%; height: 100%; border: 0; }
-    .hint { color: var(--muted); font-size: .95rem; margin-top: 8px; }
     .shots { display:grid; gap:12px; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); }
-    .shot { display:block; background:#0f1b31; border-radius:12px; overflow:hidden;
-      border:1px solid rgba(255,255,255,.08); transition: transform .15s ease, box-shadow .15s ease; }
-    .shot:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.35); }
     .shot img { width:100%; height:180px; object-fit:cover; display:block; }
-    .shot span { display:block; padding:10px 12px; color:#d7e7ff; font-size:.95rem; }
     footer { text-align:center; color:var(--muted); margin: 26px 0 10px; }
   </style>
 </head>
@@ -65,7 +60,7 @@
   <div class="wrapper">
     <!-- Header -->
     <header>
-      assets/avatar.jpg
+      <img class="avatar" src="assets/avatar.jpg" alt="Photo of Bithun Chatterjee" />
       <div class="meta">
         <h1>Bithun Chatterjee</h1>
         <p>Senior Technical Consultant — Oracle / SQL / PL/SQL · Data & ETL</p>
@@ -77,43 +72,29 @@
           <span class="chip">AWS | Azure</span>
         </div>
         <div class="btn-row">
-          mailto:bithun.chatterjee@gmail.comContact</a>
-          assets/Resume_Bithun_Chatterjee.pdfDownload CV</a>
-          https://www.linkedin.com/in/bithun-chatterjee-95911a1b/LinkedIn</a>
-          https://github.com/goldenbutterGitHub</a>
+          <a class="btn" href="mailto:bithun.chatterjee@gmail.com">Contact</a>
+          <a class="btn" href="assets/Resume_Bithun_Chatterjee.pdf" target="_blank">Download CV</a>
+          <a class="btn" href="https://www.linkedin.com/in/bithun-chatterjee-95911a1b/" target="_blank">LinkedIn</a>
+          <a class="btn" href="https://github.com/goldenbutter" target="_blank">GitHub</a>
         </div>
       </div>
     </header>
 
     <!-- Content -->
     <section class="panel grid">
-      <!-- Option A: PDF Embed -->
       <div>
         <h2>Portfolio (PDF embed)</h2>
         <div class="pdf-wrap">
-          assets/portfolio.pdf#view=fitH</iframe>
+          <iframe src="assets/portfolio.pdf#view=fitH" title="Portfolio PDF"></iframe>
         </div>
-        <p class="hint">Export from Canva → <em>Share</em> → <em>Download</em> → <strong>PDF Standard</strong>, then put it in <code>/assets/portfolio.pdf</code>.</p>
       </div>
-
-      <!-- Option B: Image Highlights -->
       <div>
-        <h2>Highlights (image slices)</h2>
+        <h2>Highlights</h2>
         <div class="shots">
-          https://your-case-study-link.example.com
-            assets/shot-1.jpg
-            <span>Oracle PL/SQL optimization — 40% runtime improvement</span>
-          </a>
-          assets/case-study-etl.pdf
-            assets/shot-2.jpg
-            <span>ETL Pipelines: ADF · Informatica · FME · Oracle</span>
-          </a>
-          assets/shot-3-full.png
-            assets/shot-3-thumb.jpg
-            <span>SQL Performance Dashboard (AWR, ASH, OEM)</span>
-          </a>
+          <a href="assets/shot-1.jpg" target="_blank"><img src="assets/shot-1.jpg" alt="Project 1" /></a>
+          <a href="assets/shot-2.jpg" target="_blank"><img src="assets/shot-2.jpg" alt="Project 2" /></a>
+          <a href="assets/shot-3-thumb.jpg" target="_blank"><img src="assets/shot-3-thumb.jpg" alt="Project 3" /></a>
         </div>
-        <p class="hint">Export images from Canva (PNG/JPG), place them in <code>/assets/</code>, and update the links above.</p>
       </div>
     </section>
 
