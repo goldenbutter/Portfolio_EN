@@ -7,21 +7,23 @@
 :root {
   --bg: #0b1220;
   --card: #111a2d;
-  --muted: #6b7a90;
-  --text: #e7eefc;
+  --muted: #aaaaaa;
+  --text: #ffffff;
   --accent: #5ea3ff;
   --accent-2: #9ad0ff;
   --radius: 16px;
   --shadow: 0 10px 30px rgba(0,0,0,.55);
+  --border-light: rgba(255,255,255,0.18);
   --icon-filter: brightness(1);
 }
 
 /* LIGHT MODE THEME */
 :root.light {
   --bg: #f4f7fb;
-  --card: #ffffff;
-  --muted: #5c6b7a;
-  --text: #1a1f27;
+  --card: #f2f2f5;          /* slightly gray, not pure white */
+  --text: #1a1a1a;          /* strong dark text */
+  --muted: #555;            /* visible placeholder */
+  --border-light: rgba(0,0,0,0.15);  /* visible border in light mode */
   --accent: #005fcc;
   --accent-2: #338dff;
   --shadow: 0 10px 30px rgba(0,0,0,.18);

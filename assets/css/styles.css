@@ -67,9 +67,10 @@ h3::after {
    LAYOUT WRAPPER
 ----------------------------------- */
 .wrapper {
+  position: relative;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 24px; /* keep 24px, it looks better */
 }
 
 /* -----------------------------------
@@ -77,6 +78,7 @@ h3::after {
 ----------------------------------- */
 header {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   padding: 18px 20px;
@@ -334,28 +336,22 @@ footer .updated {
    THEME TOGGLE BUTTON (INSIDE HEADER)
 ----------------------------------- */
 
-header {
-  position: relative; /* allows absolute positioning inside */
-  overflow: visible; /* allows theme toggle to overflow outside header */
-}
-
 #theme-toggle {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-
+  position: fixed;
+  top: 40px;
+  right: calc(50% - 550px + 40px);
+  /* 550px = half of your wrapper max-width (1100px) */
+  
+  z-index: 9999;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
   color: var(--text);
-
   padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 1.2rem;
-
   backdrop-filter: blur(6px);
   box-shadow: var(--shadow);
-
   transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
@@ -381,6 +377,12 @@ header {
 #theme-toggle:hover {
   background: rgba(255,255,255,0.15);
   border-color: var(--accent);
+}
+
+@media (max-width: 1200px) {
+  #theme-toggle {
+    right: 20px;
+  }
 }
 
 /* -----------------------------------
@@ -495,7 +497,7 @@ header {
 .contact-form input,
 .contact-form textarea {
   background: var(--card);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid var(--border-light);
   color: var(--text);
   padding: 12px 14px;
   border-radius: var(--radius);
@@ -519,6 +521,16 @@ header {
   opacity: 0;
 }
 
+::placeholder {
+  color: var(--muted);
+  opacity: 0.9;
+}
+
+:root:not([data-theme="dark"]) .contact-form input,
+:root:not([data-theme="dark"]) .contact-form textarea {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
 /* -----------------------------------
    CONTACT SECTION (2-COLUMN)
 ----------------------------------- */
@@ -533,11 +545,6 @@ header {
 .contact-left {
   animation: fadeInUp 0.7s ease forwards;
   opacity: 0;
-}
-.contact-left h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: var(--text);
 }
 
 .contact-left p {
@@ -563,6 +570,34 @@ header {
   opacity: 0.7;
 }
 
+.contact-social a::after {
+  display: none !important;
+}
+
+/* FORCE styling for LET'S CONNECT title */
+.contact-left h2.connect-title {
+  font-size: 2.8rem;
+  line-height: 1.05;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.contact-left h2.connect-title span {
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* LET’S — blueish accent */
+.contact-left h2.connect-title span.connect-lets {
+  color: var(--accent) !important;
+}
+
+/* CONNECT — lighter gray, theme-aware */
+.contact-left h2.connect-title span.connect-connect {
+  font-weight: 400;
+  color: var(--muted) !important;
+}
+
 .social-icon {
   width: 70px;
   height: 70px;
@@ -571,9 +606,9 @@ header {
   justify-content: center;
   background: var(--card);
   border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 50%;
-  text-decoration: none;
+  border-radius: 50%;  
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;  
+  text-decoration: none !important;
 }
 
 .social-icon img {
@@ -586,12 +621,11 @@ header {
   transform: translateY(-4px);
   border-color: var(--accent);  
   box-shadow: 0 0 12px rgba(94,163,255,0.35);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-
 /* Disable underline animation for buttons */
-a.social-icon::after {
+.social-icon::after {
   display: none !important;
 }
 
@@ -602,13 +636,6 @@ a.social-icon::after {
   }
 }
 
-.connect-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1.05;
-  color: var(--text);
-  margin-bottom: 12px;
-}
 
 .form-row {
   display: grid;
@@ -622,6 +649,35 @@ a.social-icon::after {
   }
 }
 
+/* Vertical divider between left and right */
+.contact-section {
+  position: relative;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent),
+    transparent
+    );
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+
+
+/* Remove divider on mobile */
+@media (max-width: 800px) {
+  .contact-section::before {
+    display: none;
+  }
+}
 
 /* -----------------------------------
    THANK YOU PAGE
