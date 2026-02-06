@@ -301,10 +301,17 @@ a.btn::after {
 /* -----------------------------------
    FOOTER
 ----------------------------------- */
+
 footer {
   text-align: center;
   color: var(--muted);
-  margin: 26px 0 10px;
+  margin: 40px 0 20px;
+  font-size: 0.9rem;
+}
+
+footer .updated {
+  margin-top: 6px;
+  opacity: 0.8;
 }
 
 /* -----------------------------------
@@ -352,7 +359,66 @@ header {
   transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
+/* Tooltip */
+#theme-toggle::after {
+  content: "Toggle theme";
+  position: absolute;
+  top: -32px;
+  right: 0;
+  background: var(--card);
+  color: var(--text);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
 #theme-toggle:hover {
   background: rgba(255,255,255,0.15);
   border-color: var(--accent);
+}
+
+/* -----------------------------------
+   TECH STACK GRID
+----------------------------------- */
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.tech-item {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.tech-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(94,163,255,0.25);
+  border-color: var(--accent);
+}
+
+.tech-item img {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 10px;
+  filter: var(--icon-filter);
+}
+
+.tech-item span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text);
 }

@@ -24,8 +24,9 @@
 <body>
   <div class="wrapper">
 
-    <!-- Header -->
 
+
+    <!-- Header -->
     <header class="reveal">
       <div class="header-left">
         <img class="avatar" src="assets/img/avatar.jpg" alt="Photo of Bithun Chatterjee" />
@@ -44,15 +45,103 @@
           </div>
 
           <div class="btn-row">
-            <a class="btn" href="mailto:bithun.chatterjee@gmail.com">Contact</a>
-            <a class="btn" href="assets/pdf/Bithun.Chatterjee_CV_2026.pdf" target="_blank" rel="noopener">View CV</a>
-            <a class="btn" href="https://www.linkedin.com/in/bithun-chatterjee-95911a1b/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="https://github.com/goldenbutter" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="mailto:bithun.chatterjee@gmail.com" title="Contact Bithun">Contact</a>
+            <a class="btn" href="assets/pdf/Bithun.Chatterjee_CV_2026.pdf" target="_blank" rel="noopener" title="View CV">View CV</a>
+            <a class="btn" href="https://www.linkedin.com/in/bithun-chatterjee-95911a1b/" target="_blank" rel="noopener" title="LinkedIn Profile">LinkedIn</a>
+            <a class="btn" href="https://github.com/goldenbutter" target="_blank" rel="noopener" title="GitHub Profile">GitHub</a>
           </div>
         </div>
       </div>
-        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
     </header>
+
+    <section class="panel">
+      <h2>Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <img src="assets/img/icons/oracle.svg" alt="Oracle Database">
+          <span>Oracle DB</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/linux.svg" alt="Linux">
+          <span>Linux</span>
+        </div> 
+
+        <div class="tech-item">
+          <img src="assets/img/icons/aws.svg" alt="AWS">
+          <span>AWS</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/git.svg" alt="Git">
+          <span>Git</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/docker.svg" alt="Docker">
+          <span>Docker</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/jenkins.svg" alt="Jenkins">
+          <span>Jenkins</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/kubernetes_color.svg" alt="Kubernetes">
+          <span>Kubernetes</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/snowflake.svg" alt="Snowflake">
+          <span>Snowflake</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/html.svg" alt="HTML">
+          <span>HTML</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/css.svg" alt="CSS">
+          <span>CSS</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/dotnet.svg" alt=".NET">
+          <span>.NET</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/javascript.svg" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/react.svg" alt="React">
+          <span>React</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/nodejs.svg" alt="Node.js">
+          <span>Node.js</span>
+        </div>
+        
+        <div class="tech-item">
+          <img src="assets/img/icons/terraform.svg" alt="Terraform">
+          <span>Terraform</span>
+        </div>
+
+        <div class="tech-item">
+          <img src="assets/img/icons/informatica.svg" alt="Informatica">
+          <span>Informatica</span>
+        </div>
+
+      </div>
+    </section>
+
+    
 
     <div class="section-divider"></div>
 
@@ -153,9 +242,9 @@
 
     <!-- Footer -->
     <footer>
-      © <span id="year"></span> Bithun Chatterjee
+      <p>© <span id="year"></span> Bithun Chatterjee — All rights reserved.</p>
+      <p class="updated">Last updated: <span id="last-updated"></span></p>
     </footer>
-
   </div>
 
   
@@ -165,5 +254,6 @@
   </script>
   <script src="assets/js/script.js"></script>
   <script src="assets/js/theme-toggle.js"></script>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script>
 </body>
 </html>

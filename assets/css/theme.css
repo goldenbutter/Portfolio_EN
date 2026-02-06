@@ -13,6 +13,7 @@
   --accent-2: #9ad0ff;
   --radius: 16px;
   --shadow: 0 10px 30px rgba(0,0,0,.55);
+  --icon-filter: brightness(1);
 }
 
 /* LIGHT MODE THEME */
@@ -24,4 +25,5 @@
   --accent: #005fcc;
   --accent-2: #338dff;
   --shadow: 0 10px 30px rgba(0,0,0,.18);
+  --icon-filter: brightness(0.85) saturate(1.1);
 }
