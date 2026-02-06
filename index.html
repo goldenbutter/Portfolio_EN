@@ -45,10 +45,10 @@
           </div>
 
           <div class="btn-row">
-            <a class="btn" href="mailto:bithun.chatterjee@gmail.com" title="Contact Bithun">Contact</a>
+    <!--         <a class="btn" href="mailto:bithun.chatterjee@gmail.com" title="Contact Bithun">Contact</a>  -->
             <a class="btn" href="assets/pdf/Bithun.Chatterjee_CV_2026.pdf" target="_blank" rel="noopener" title="View CV">View CV</a>
-            <a class="btn" href="https://www.linkedin.com/in/bithun-chatterjee-95911a1b/" target="_blank" rel="noopener" title="LinkedIn Profile">LinkedIn</a>
-            <a class="btn" href="https://github.com/goldenbutter" target="_blank" rel="noopener" title="GitHub Profile">GitHub</a>
+    <!--        <a class="btn" href="https://www.linkedin.com/in/bithun-chatterjee-95911a1b/" target="_blank" rel="noopener" title="LinkedIn Profile">LinkedIn</a>  -->
+    <!--        <a class="btn" href="https://github.com/goldenbutter" target="_blank" rel="noopener" title="GitHub Profile">GitHub</a>  -->
           </div>
         </div>
       </div>
@@ -215,45 +215,64 @@
       </div>
     </section>
 
-    <!-- Contact form -->
     <div class="section-divider"></div>
-    <section class="panel">
-      <h2>Contact Me</h2>
 
-      <form class="contact-form" action="https://formsubmit.co/bithun.chatterjee@gmail.com" method="POST">
+    <!-- Contact form -->
+    <section class="panel contact-section">
+  
+      <div class="contact-left">
+        <h2 class="connect-title">
+          LET'S <br>CONNECT.
+        </h2>
+        <p>Ready to build high-performance infrastructure?<br> I'm always open to new challenges.</p>
 
-        <!-- Redirect after submit -->
-        <input type="hidden" name="_next" value="https://goldenbutter.github.io/Portfolio_EN/thankyou.html">
-
-        <!-- Anti-spam -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-
-        <!-- Honeypot (spam protection) -->
-        <input type="text" name="_honey" style="display:none">
-
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" name="name" placeholder="John Doe" required>
+        <div class="contact-social">
+          <a class="social-icon" href="https://www.linkedin.com/in/bithun-chatterjee-95911a1b/" target="_blank">
+            <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" title="Linkedin"> 
+          </a>
+          <a class="social-icon" href="https://github.com/goldenbutter" target="_blank">
+            <img src="assets/img/icons/github.svg" alt="GitHub" title="GitHub"> 
+          </a>
+          <a class="social-icon" href="mailto:bithun.chatterjee@gmail.com">
+            <img src="assets/img/icons/mail.svg" alt="Email" title="Email"> 
+          </a>
         </div>
+      </div>
 
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="john@email.com" required>
-        </div>
+      <div class="contact-right">
+        <form class="contact-form" action="https://formsubmit.co/bithun.chatterjee@gmail.com" method="POST">
 
-        <div class="form-group">
-          <label>Subject</label>
-          <input type="text" name="subject" placeholder="Project Discussion" required>
-        </div>
+          <input type="hidden" name="_next" value="https://goldenbutter.github.io/Portfolio_EN/thankyou.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
 
-        <div class="form-group">
-          <label>Message</label>
-          <textarea name="message" rows="5" placeholder="How can I help you?" required></textarea>
-        </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" placeholder="John Doe" required>
+            </div>
 
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="john@email.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="Project Discussion" required>
+          </div>
+
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="How can I help you?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Signal</button>
+        </form>
+      </div>
+
     </section>
 
 
