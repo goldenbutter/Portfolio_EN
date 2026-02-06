@@ -14,12 +14,12 @@ Welcome to my portfolio! I am a **Senior Technical Consultant** specializing in 
 - **Cloud & Data Platforms**: Azure, AWS
 - **Data Visualization**: Power BI, Excel (DAX , Power query)
 - **Performance Tuning & Optimization** : Advanced SQL, PL/SQL, table partitioning, query optimization, backup and restoration
-- **DevOps & Collaboration**: GitHub, Azure DevOps, AWS Services
+- **DevOps & Collaboration**: Git, GitHub, Azure DevOps, AWS Services
 - **Other Tools**: Linux, Shell scripting, PowerShell, Python (Basic)
-- **Container Platform**: Docker
+- **Container Platform**: Docker, Podman
 - **Orchestration**: Kubernetes
-- **Deployment** : Octopus, Jenkins
-- **Infrastructure as Code** : Helm, Terradata (Basic)
+- **Deployment** : Octopus, Jenkins (CI/CD)
+- **Infrastructure as Code** : Helm, Terradata (Basic), Ansible
 
 # Work Experience
 
@@ -37,8 +37,10 @@ Welcome to my portfolio! I am a **Senior Technical Consultant** specializing in 
 
 # Certificates
 
-- Informatica PowerCenter Developer
-- Microsoft Azure Data Engineer (Associate)
+- Informatica Data Governance
+- Microsoft Azure Fundamentals
+- AWS Techinal Professional
+- AWS Business Professional
 
 
 
@@ -52,8 +54,8 @@ Feel free to explore the repositories and reach out for collaboration or consult
   - **Key Achievement**: Merged multiple municipalities'geodata (more than **63**) into one database when two or more different Grid companies merged together via kartverket (The Norwegian Mapping Authority)
 - **NRL implementation** for more than **55** grid companies| Duration: 2023 – 2024
   - **Key Achievement**: Delivered the nationwide implementation of NRL for **50+** grid companies, enabling standardized aviation‑obstacle reporting and significantly strengthening national air‑safety compliance.
-- **AWS DevOps Two-Tier Web Application Deployment** |  Duration: 2025 – Present
-  - **Key Achievement**: Designed and implemented a highly available two-tier architecture on **AWS** to host a web application with a separate database layer. Automated deployment and scaling using **DevOps practices**. Reduced deployment time by **70%** through **CI/CD** automation.
+- **Microservice Demo (Python FastAPI + HTML/JS + Docker + Kubernetes)** | Duration: 2026 – Present
+  - **Key Achievement**: Designed a lightweight, containerized **FastAPI backend** and **HTML/JS frontend** to practice real‑world **Docker** workflows, **multi‑service orchestration**, and **Kubernetes deployments**. Built hands‑on experience with **Deployments, Services, Ingress**, and single‑port container exposure. Enabled easy local testing with **docker‑compose**, clear folder structure, and minimal code to focus on automation, deployment fundamentals, and microservice patterns.
 - **Cloud‑Native 3‑Tier Web App on AWS with EKS, ECR & Ingress (ALB)** | Duration: 2025 – Present
   - **Key Achievement**: Achieved **99.9%** uptime and **~25%** cost optimization through autoscaling, resource rightsizing, and Spot instance usage. Integrated **Prometheus** and **Grafana** for real-time monitoring, dashboards, and alerting, reducing incident resolution time by **30%**.
 - **Publications – Full‑Stack Demo (ASP.NET API + React SPA + Docker + Jenkins CI/CD)** | Duration: 2026 – Present
@@ -65,7 +67,7 @@ Feel free to explore the repositories and reach out for collaboration or consult
 
 # Personal Statement
 
-I have lived in Norway for the past seven years (two years in Oslo and five years in Trondheim). Recently I bought a small house in Fannrem – a small charming village with maximum 1500 residents (probably half of them are cows!). I enjoy reading and have a collection of over 100 books at home, which reflects my curiosity and love for continuous learning. I also learned to ski last year and am practicing more. I am socially very active, easily build connections and value teamwork. Originally from India, but I have embraced Norwegian culture by learning the language (passed **B1** level test).
+I have lived in Norway for the past eight years (two years in Oslo and five years in Trondheim). Recently I bought a small house in **Fannrem** – a small charming village with maximum 1500 residents (probably half of them are cows!). I enjoy reading and have a collection of over 100 books at home, which reflects my curiosity and love for continuous learning. I also learned to ski last year and am practicing more. I am socially very active, easily build connections and value teamwork. Originally from India, but I have embraced Norwegian culture by learning the language (passed **B1** level test).
 
 
 
