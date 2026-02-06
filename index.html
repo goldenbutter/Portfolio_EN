@@ -7,65 +7,72 @@
   <meta name="description" content="Portfolio of Bithun Chatterjee — Oracle, SQL, PL/SQL projects and case studies." />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Bithun Chatterjee — Portfolio" />
   <meta property="og:description" content="Oracle, SQL, PL/SQL projects, dashboards & case studies." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://goldenbutter.github.io/Portfolio_EN/" />
-  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
   <div class="wrapper">
 
     <!-- Header -->
-    <header>
-      <img class="avatar" src="assets/avatar.jpg" alt="Photo of Bithun Chatterjee" />
-      <div class="meta">
-        <h1>Bithun Chatterjee</h1>
-        <p>Senior Technical Consultant — Oracle / SQL / PL/SQL · Data & ETL · DevOps</p>
 
-        <div class="chips">
-          <span class="chip">Oracle Database</span>
-          <span class="chip">SQL & PL/SQL</span>
-          <span class="chip">Performance Tuning</span>
-          <span class="chip">ETL & Data Pipelines</span>
-          <span class="chip">AWS | Azure</span>
-        </div>
+    <header class="reveal">
+      <div class="header-left">
+        <img class="avatar" src="assets/img/avatar.jpg" alt="Photo of Bithun Chatterjee" />
+        <div class="meta">
+          <h1>Bithun Chatterjee</h1>
+          <p>Senior Technical Consultant — Oracle / SQL / PL/SQL · Data & ETL · DevOps</p>
 
-        <div class="btn-row">
-          <a class="btn" href="mailto:bithun.chatterjee@gmail.com">Contact</a>
-          <a class="btn" href="assets/Bithun.Chatterjee_CV_2026.pdf" target="_blank" rel="noopener">Download CV</a>
-          <a class="btn" href="https://www.linkedin.com/in/bithun-chatterjee-95911a1b/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/goldenbutter" target="_blank" rel="noopener">GitHub</a>
+          <div class="chips">
+            <span class="chip">Oracle Database</span>
+            <span class="chip">SQL & PL/SQL</span>
+            <span class="chip">Performance Tuning</span>
+            <span class="chip">ETL & Data Pipelines</span>
+            <span class="chip">AWS | Azure</span>
+            <span class="chip">Docker / Kubernetes</span>
+            <span class="chip">CI/CD</span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="mailto:bithun.chatterjee@gmail.com">Contact</a>
+            <a class="btn" href="assets/pdf/Bithun.Chatterjee_CV_2026.pdf" target="_blank" rel="noopener">View CV</a>
+            <a class="btn" href="https://www.linkedin.com/in/bithun-chatterjee-95911a1b/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/goldenbutter" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
       </div>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </header>
 
     <div class="section-divider"></div>
 
     <!-- Portfolio PDF -->
-    <section class="panel">
-      <h2>Portfolio</h2>
+    <section class="panel reveal">
+      <h2>Resume</h2>
       <div class="pdf-wrap">
-        <iframe src="assets/Resume_Bithun_Chatterjee.pdf#view=fitH" title="Portfolio PDF"></iframe>
+        <iframe src="assets/pdf/Resume_Bithun_Chatterjee.pdf#view=fitH" title="Portfolio PDF"></iframe>
       </div>
     </section>
 
     <div class="section-divider"></div>
 
     <!-- Projects -->
-    <section class="panel">
+    <section class="panel reveal">
       <h2>Projects</h2>
 
       <div class="projects">
 
-        <article class="card">
+        <article class="card reveal">
           <h3>Azure Cloud Migration from On‑Prem</h3>
           <p>
             <strong>Duration:</strong> 2024 – Present.<br>
@@ -73,7 +80,7 @@
           </p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <h3>Matrikkel‑Migration</h3>
           <p>
             <strong>Duration:</strong> 2023 – Present.<br>
@@ -81,7 +88,7 @@
           </p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <h3>NRL Implementation Grid Companies</h3>
           <p>
             <strong>Duration:</strong> 2023 – 2024.<br>
@@ -89,7 +96,7 @@
           </p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <h3>Conversion of 2D to 3D Database Structures</h3>
           <p>
             <strong>Duration:</strong> 2022 – 2024.<br>
@@ -97,7 +104,7 @@
           </p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <h3>Fasit Migration from MSSQL to Oracle</h3>
           <p>
             <strong>Duration:</strong> 2022 – 2023.<br>
@@ -105,7 +112,7 @@
           </p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <h3>Georydd Implementation for Geospatial Data Quality</h3>
           <p>
             <strong>Duration:</strong> 2022 – 2023.<br>
@@ -113,8 +120,16 @@
           </p>
         </article>
 
+        <article class="card reveal">
+          <h3>Cloud‑Native 3‑Tier Web App (AWS EKS, ECR, ALB)</h3>
+          <p>
+            <strong>Duration:</strong> 2025 – Present.<br>
+            React, Node.js, MongoDB → Docker → ECR → EKS with ALB ingress & Prometheus/Grafana monitoring.
+          </p>
+        </article>
+
         <a href="https://github.com/goldenbutter/microservice-demo" target="_blank">
-          <article class="card">
+          <article class="card reveal">
             <h3>Microservice Demo (FastAPI + HTML/JS + Docker + Kubernetes)</h3>
             <p>
               <strong>Duration:</strong> 2026 – Present.<br>
@@ -123,16 +138,8 @@
           </article>
         </a>
 
-        <article class="card">
-          <h3>Cloud‑Native 3‑Tier Web App (AWS EKS, ECR, ALB)</h3>
-          <p>
-            <strong>Duration:</strong> 2025 – Present.<br>
-            React, Node.js, MongoDB → Docker → ECR → EKS with ALB ingress & Prometheus/Grafana monitoring.
-          </p>
-        </article>
-
         <a href="https://github.com/goldenbutter/golden.publication" target="_blank">
-          <article class="card">
+          <article class="card reveal">
             <h3>Publications – Full‑Stack Demo (ASP.NET API + React SPA + Docker + Jenkins CI/CD)</h3>
             <p>
               <strong>Duration:</strong> 2026 – Present.<br>
@@ -151,8 +158,12 @@
 
   </div>
 
+  
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/theme-toggle.js"></script>
 </body>
 </html>

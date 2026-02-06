@@ -1,0 +1,27 @@
+/* -----------------------------------
+   THEME VARIABLES (DARK + LIGHT)
+   Golden's Portfolio
+----------------------------------- */
+
+/* Default theme = DARK */
+:root {
+  --bg: #0b1220;
+  --card: #111a2d;
+  --muted: #6b7a90;
+  --text: #e7eefc;
+  --accent: #5ea3ff;
+  --accent-2: #9ad0ff;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.55);
+}
+
+/* LIGHT MODE THEME */
+:root.light {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --muted: #5c6b7a;
+  --text: #1a1f27;
+  --accent: #005fcc;
+  --accent-2: #338dff;
+  --shadow: 0 10px 30px rgba(0,0,0,.18);
+}
