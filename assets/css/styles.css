@@ -391,12 +391,14 @@ footer .updated {
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
   gap: 16px;
   margin-top: 12px;
   animation: fadeInUp 0.6s ease forwards;
   opacity: 0;
+
+  grid-template-columns: repeat(8, 1fr);
 }
+
 .tech-grid:nth-of-type(1) { animation-delay: 0.1s; }
 .tech-grid:nth-of-type(2) { animation-delay: 0.2s; }
 .tech-grid:nth-of-type(3) { animation-delay: 0.3s; }
@@ -431,6 +433,12 @@ footer .updated {
   display: block;
   font-size: 0.9rem;
   color: var(--text);
+}
+
+@media (max-width: 500px) {
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
 }
 
 /* -----------------------------------
