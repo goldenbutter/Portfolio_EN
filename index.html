@@ -17,6 +17,7 @@
   <meta property="og:image" content="assets/img/og-image.jpg" />
 
   <!-- External CSS -->
+      <link rel="stylesheet" href="assets/css/navigation.css">
       <link rel="stylesheet" href="assets/css/global.css">
       <link rel="stylesheet" href="assets/css/header.css">
       <link rel="stylesheet" href="assets/css/chips.css">
@@ -34,6 +35,16 @@
 </head>
 
 <body>
+  <nav class="top-nav">
+    <a href="#home">Home</a>    
+    <a href="#skills">Skills</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div id="home"></div>
+
   <div class="wrapper">
     <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
     <!-- Header -->
@@ -65,7 +76,7 @@
         
     </header>
 
-    <section class="panel">
+    <section id="skills" class="panel">
       <h2>Tech Stack</h2>
 
       <!-- Database -->
@@ -135,7 +146,7 @@
     <div class="section-divider"></div>
 
     <!-- Portfolio PDF -->
-    <section class="panel reveal">
+    <section id="resume" class="panel reveal">
       <h2>Resume</h2>
       <div class="pdf-wrap">
         <iframe src="assets/pdf/Resume_Bithun_Chatterjee.pdf#view=fitH" title="Portfolio PDF"></iframe>
@@ -145,7 +156,7 @@
     <div class="section-divider"></div>
 
     <!-- Projects -->
-    <section class="panel reveal">
+    <section id="projects" class="panel reveal">
       <h2>Projects</h2>
 
       <div class="projects">
@@ -232,7 +243,7 @@
     <div class="section-divider"></div>
 
     <!-- Contact form -->
-    <section class="panel contact-section">
+    <section id="contact" class="panel contact-section">
   
       <div class="contact-left">
         <h2 class="connect-title">
