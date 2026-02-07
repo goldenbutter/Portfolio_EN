@@ -1,4 +1,5 @@
-Welcome to my portfolio! I am a **Senior Technical Consultant** specializing in **ETL**, **database development** and **DevOps data engineering**, **data analysing** with extensive experience across Norway, India, and Singapore. My focus is on designing robust data solutions, optimizing performance, and enabling efficient data-driven decision-making for businesses.
+Welcome to my profile! I am a **Senior Technical Consultant** specializing in **ETL**, **database development** and **DevOps data engineering**, **data analysing** with extensive experience across Norway, India, and Singapore. 
+My focus is on designing robust data solutions, optimizing performance, and enabling efficient data-driven decision-making for businesses.
 
 # 👨‍💻 About Me
 
@@ -9,7 +10,7 @@ Welcome to my portfolio! I am a **Senior Technical Consultant** specializing in 
 
 # Skills & Expertise
 
-- **ETL/ELT Development & Automation**: Informatica, Fabrics, ADF, Snowflake, Databricks (SQL, PySpark), Oracle FME, Abinitio
+- **ETL/ELT Development & Automation**: Informatica, Snowflake, Oracle FME, Abinitio
 - **Database Design & Modeling:** Oracle SQL/PL-SQL, MSSQL, PostgreSQL, MongoDB
 - **Cloud & Data Platforms**: Azure, AWS
 - **Data Visualization**: Power BI, Excel (DAX , Power query)
@@ -19,7 +20,7 @@ Welcome to my portfolio! I am a **Senior Technical Consultant** specializing in 
 - **Container Platform**: Docker, Podman
 - **Orchestration**: Kubernetes
 - **Deployment** : Octopus, Jenkins (CI/CD)
-- **Infrastructure as Code** : Helm, Terradata (Basic), Ansible
+- **Infrastructure as Code** : Helm, Terradata (Basic), Ansible (Basic)
 
 # Work Experience
 
