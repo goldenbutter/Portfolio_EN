@@ -1,0 +1,21 @@
+/* -----------------------------------
+   THANK YOU PAGE
+----------------------------------- */
+
+.thankyou-panel {
+  text-align: center;
+  animation: fadeInUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.thankyou-panel h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.thankyou-panel p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}

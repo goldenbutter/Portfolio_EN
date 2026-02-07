@@ -1,0 +1,25 @@
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
+
+footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--muted);
+  margin: 40px 0 20px;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+footer .updated {
+  margin-top: 6px;
+  opacity: 0.8;
+}
+
+/* Stronger selector to override panel styles */
+.wrapper > footer {
+  text-align: center !important;
+  color: var(--muted) !important;
+}

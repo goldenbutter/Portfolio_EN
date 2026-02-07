@@ -1,0 +1,204 @@
+/* -----------------------------------
+   CONTACT FORM
+----------------------------------- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--card);
+  border: 1px solid var(--border-light);
+  color: var(--text);
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(94,163,255,0.25);
+  outline: none;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+.contact-form {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* -----------------------------------
+   CONTACT SECTION
+----------------------------------- */
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-left {
+  animation: fadeInUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.contact-left p {
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact-social {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.contact-social a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.contact-social a:hover {
+  opacity: 0.7;
+}
+
+.contact-social a::after {
+  display: none !important;
+}
+
+/* -----------------------------------
+   CONNECT TITLE 
+----------------------------------- */
+
+.contact-left h2.connect-title {
+  font-size: 2.8rem;
+  line-height: 1.05;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.contact-left h2.connect-title span {
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* LET’S — blueish accent */
+.contact-left h2.connect-title span.connect-lets {
+  color: var(--accent) !important;
+}
+
+/* CONNECT — lighter gray, theme-aware */
+.contact-left h2.connect-title span.connect-connect {
+  font-weight: 400;
+  color: var(--muted) !important;
+}
+
+/* -----------------------------------
+   SOCIAL ICON  
+----------------------------------- */
+
+.social-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;  
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;  
+  text-decoration: none !important;
+}
+
+.social-icon img {
+  width: 60px;
+  height: 60px;
+  filter: var(--icon-filter);
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);  
+  box-shadow: 0 0 12px rgba(94,163,255,0.35);
+  text-decoration: none !important;
+}
+
+.social-icon::after {
+  display: none !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 800px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 700px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -----------------------------------
+   DIVIDER
+----------------------------------- */
+
+.contact-section {
+  position: relative;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent),
+    transparent
+    );
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+
+/* Remove divider on mobile */
+@media (max-width: 800px) {
+  .contact-section::before {
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+/* -----------------------------------
+   CHIPS
+----------------------------------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  background: #425f87;
+  border: 1px solid rgba(255,255,255,.08);
+  color: #cfe3ff;
+}
