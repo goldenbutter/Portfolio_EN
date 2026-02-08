@@ -34,4 +34,14 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 
-:root.dark { }
+:root.dark {
+  --bg: #0b1220;
+  --card: #111a2d;
+  --muted: #aaaaaa;
+  --text: #ffffff;
+  --accent: #5ea3ff;
+  --accent-2: #9ad0ff;
+  --shadow: 0 10px 30px rgba(0,0,0,.55);
+  --border-light: rgba(255,255,255,0.18);
+  --icon-filter: brightness(1);
+}
