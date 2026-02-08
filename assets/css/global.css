@@ -1,18 +1,4 @@
 /* -----------------------------------
-   THEME VARIABLES
------------------------------------ */
-:root {
-  --bg: #0b1220;
-  --card: #111a2d;
-  --muted: #6b7a90;
-  --text: #e7eefc;
-  --accent: #5ea3ff;
-  --accent-2: #9ad0ff;
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
-}
-
-/* -----------------------------------
    GLOBAL RESET
 ----------------------------------- */
 * { box-sizing: border-box; }

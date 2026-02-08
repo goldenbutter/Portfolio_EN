@@ -5,9 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You | Bithun Chatterjee</title>
 
+  <!-- Apply saved theme BEFORE CSS loads --> 
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        document.documentElement.classList.add("light");
+      } else if (savedTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+
   <!-- Theme + Styles -->
-  <link rel="stylesheet" href="assets/css/theme.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/global.css"> 
+  <link rel="stylesheet" href="assets/css/themes.css"> 
+  <link rel="stylesheet" href="assets/css/theme-toggle.css"> 
+  <link rel="stylesheet" href="assets/css/buttons.css"> 
+  <link rel="stylesheet" href="assets/css/panels.css"> 
+  <link rel="stylesheet" href="assets/css/thankyou.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
