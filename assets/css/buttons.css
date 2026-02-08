@@ -1,23 +1,43 @@
 /* -----------------------------------
-   BUTTONS
+   UNIVERSAL GHOST BUTTON (card-style)
 ----------------------------------- */
+
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: #123b75;
-  border: 1px solid rgba(255,255,255,.1);
-  color: #e9f3ff;
-  font-weight: 600;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  padding: 12px 14px;
+  border-radius: 14px; /* match card radius */
+
+  background: transparent;
+  border: 0.9px solid var(--border-light);
+  color: var(--accent);
+
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+  
+  box-shadow: var(--shadow); /* same base shadow as cards */
 }
+
+/* Hover: EXACT project-card effect */
 .btn:hover {
-  background: var(--accent-20);
-  /*transform: translateY(-6px);*/
-  box-shadow: 0 18px 50px rgba(94,163,255,0.25);
+  transform: translateY(-1px);
+  background: transparent;
+  color: var(--accent-2); /* light bluish text */
   border-color: var(--accent);
+
+  box-shadow: 
+    0 18px 50px rgba(94,163,255,0.25); /* same glow as cards */
 }
 
 .btn-row {

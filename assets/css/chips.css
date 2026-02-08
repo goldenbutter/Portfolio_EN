@@ -4,7 +4,7 @@
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   margin-top: 10px;
 }
 
@@ -15,4 +15,5 @@
   background: #425f87;
   border: 1px solid rgba(255,255,255,.08);
   color: #cfe3ff;
+  box-shadow: var(--shadow);
 }

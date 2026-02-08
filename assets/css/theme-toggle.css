@@ -4,8 +4,8 @@
 
 #theme-toggle {
   position: fixed;
-  top: 40px;
-  right: calc(50% - 550px + 40px);
+  top: 0.2rem;
+  right: calc(50% - 550px + 300px); 
   /* 550px = half of your wrapper max-width (1100px) */
   
   z-index: 9999;
