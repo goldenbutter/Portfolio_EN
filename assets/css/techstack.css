@@ -10,7 +10,7 @@
   opacity: 0;
 
 
-  grid-template-columns: repeat(10, 90px);
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
 }
 
 .tech-grid:nth-of-type(1) { animation-delay: 0.1s; }
@@ -22,12 +22,17 @@
 
 .tech-item {
   background: var(--card);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius);
   padding: 16px;
-  text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .tech-item:hover {
@@ -39,6 +44,8 @@
 .tech-item img {
   width: 42px;
   height: 42px;
+  flex-shrink: 0;
+  object-fit: contain;
   margin-bottom: 10px;
   filter: var(--icon-filter);
 }
@@ -47,6 +54,7 @@
   display: block;
   font-size: 0.9rem;
   color: var(--text);
+  line-height: 1.2;
 }
 
 @media (max-width: 500px) {

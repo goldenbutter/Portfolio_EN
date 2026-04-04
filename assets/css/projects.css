@@ -3,7 +3,7 @@
 ----------------------------------- */
 .card {
   background: var(--card);
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid var(--border-light);
   border-radius: 14px;
   padding: 16px;
   box-shadow: var(--shadow);
@@ -38,6 +38,23 @@
 /* When card is hovered, title becomes blue */
 .card:hover h3 {
   color: var(--accent);
+}
+
+/* -----------------------------------
+   CARD BADGE (GitHub link indicator)
+----------------------------------- */
+.card-badge {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  opacity: 0.7;
+  transition: opacity 0.25s ease;
+}
+
+.card:hover .card-badge {
+  opacity: 1;
 }
 
 

@@ -69,7 +69,7 @@ h3::after {
 ----------------------------------- */
 .section-divider {
   height: 1px;
-  background: rgba(255,255,255,0.08);
+  background: var(--border-light);
   margin: 40px 0;
 }
 
@@ -78,11 +78,11 @@ h3::after {
 ----------------------------------- */
 .pdf-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1.414; 
+  aspect-ratio: 1 / 1.414;
   border-radius: 16px;
   overflow: hidden;
-  background: #0c1528;
-  border: 1px solid rgba(255,255,255,0.12);
+  background: var(--card);
+  border: 1px solid var(--border-light);
   box-shadow: 0 18px 50px rgba(0,0,0,0.45);
 }
 .pdf-wrap iframe {

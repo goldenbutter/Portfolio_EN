@@ -13,7 +13,12 @@
   border-radius: 999px;
   font-size: 0.9rem;
   background: #425f87;
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid var(--border-light);
   color: #cfe3ff;
   box-shadow: var(--shadow);
+}
+
+:root.light .chip {
+  background: #dce6f2;
+  color: #1a3a5c;
 }

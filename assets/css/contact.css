@@ -40,10 +40,6 @@
   outline: none;
 }
 
-.contact-form {
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
-}
 
 .contact-form button.btn {
   width: auto;
@@ -60,11 +56,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: start;
-}
-
-.contact-left {
-  animation: fadeInUp 0.7s ease forwards;
-  opacity: 0;
 }
 
 .contact-left p {

@@ -7,13 +7,17 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(11,18,32,0.85);
   backdrop-filter: blur(8px);
   padding: 12px 20px;
   display: flex;
   justify-content: center;
   gap: 24px;
   z-index: 9999;
+}
+
+:root.light .top-nav {
+  background: rgba(244,247,251,0.85);
 }
 
 .top-nav a {
@@ -25,6 +29,14 @@ html {
 
 .top-nav a:hover {
   color: var(--accent);
+}
+
+.top-nav a.active {
+  color: var(--accent);
+}
+
+.top-nav a::after {
+  display: none;
 }
 
 #scrollTopBtn {
