@@ -156,6 +156,26 @@
 @media (max-width: 800px) {
   .contact-section {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-left h2.connect-title {
+    font-size: 2rem;
+  }
+
+  .contact-social {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .social-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .social-icon img {
+    width: 42px;
+    height: 42px;
   }
 }
 
@@ -200,5 +220,21 @@
 @media (max-width: 800px) {
   .contact-section::before {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .social-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-left h2.connect-title {
+    font-size: 1.7rem;
   }
 }
