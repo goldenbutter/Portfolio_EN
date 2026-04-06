@@ -30,23 +30,32 @@
       <link rel="stylesheet" href="assets/css/contact.css">
       <link rel="stylesheet" href="assets/css/footer.css">
       <link rel="stylesheet" href="assets/css/animations.css">
+      <link rel="stylesheet" href="assets/css/cursor.css">
       <link rel="stylesheet" href="assets/css/themes.css">
 </head>
 
 <body>
-  <nav class="top-nav">
-    <div class="nav-links">
-      <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a>
-      <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
-      <a href="#resume" class="nav-link" data-i18n="nav.resume">Resume</a>
-      <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
-      <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
-    </div>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <!-- Mobile hamburger + slide panel -->
+  <button type="button" id="hamburger" class="hamburger" aria-label="Menu" data-i18n-aria="aria.menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-links">
+    <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a>
+    <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+    <a href="#resume" class="nav-link" data-i18n="nav.resume">Resume</a>
+    <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+    <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
     <div class="nav-controls">
       <button type="button" id="lang-toggle" aria-label="Switch to English" title="Switch to English" data-i18n-aria="aria.lang" data-i18n-title="title.lang">EN</button>
       <button type="button" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme" data-i18n-aria="aria.theme" data-i18n-title="title.theme">🌙</button>
     </div>
-  </nav>
+  </div>
+
+  <!-- Desktop nav bar -->
+  <nav class="top-nav"></nav>
 
   <div id="home"></div>
 
@@ -393,6 +402,9 @@
 
   <button type="button" id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top" data-i18n-aria="aria.scrolltop" data-i18n-title="title.scrolltop">&#8593;</button>
 
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/tilt.js"></script>
+  <script src="assets/js/hamburger.js"></script>
   <script src="assets/js/script.js"></script>
   <script src="assets/js/theme-toggle.js"></script>
   <script src="assets/js/lang-toggle.js"></script>

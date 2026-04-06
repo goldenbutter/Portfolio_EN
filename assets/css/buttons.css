@@ -19,19 +19,19 @@
   font-size: 1rem;
   font-weight: 400;
 
+  transform-style: preserve-3d;
   transition:
-    transform 0.35s ease,
+    transform 0.2s ease-out,
     box-shadow 0.35s ease,
     border-color 0.35s ease,
     background 0.25s ease,
     color 0.25s ease;
-  
+
   box-shadow: var(--shadow); /* same base shadow as cards */
 }
 
 /* Hover: EXACT project-card effect */
 .btn:hover {
-  transform: translateY(-1px);
   background: transparent;
   color: var(--accent-2); /* light bluish text */
   border-color: var(--accent);
