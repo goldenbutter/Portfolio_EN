@@ -104,6 +104,7 @@ const translations = {
     // Accessibility
     "aria.theme": "Toggle theme",
     "title.theme": "Toggle theme",
+    "aria.menu": "Menu",
     "aria.scrolltop": "Scroll to top",
     "title.scrolltop": "Scroll to top",
     "aria.lang": "Bytt til norsk",
@@ -221,6 +222,7 @@ const translations = {
     // Accessibility
     "aria.theme": "Bytt tema",
     "title.theme": "Bytt tema",
+    "aria.menu": "Meny",
     "aria.scrolltop": "Bla til toppen",
     "title.scrolltop": "Bla til toppen",
     "aria.lang": "Switch to English",

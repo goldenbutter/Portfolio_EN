@@ -2,28 +2,37 @@ html {
   scroll-behavior: smooth;
 }
 
+/* -----------------------------------
+   DESKTOP NAV BAR
+----------------------------------- */
 .top-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 48px;
   background: rgba(11,18,32,0.85);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  padding: 12px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 :root.light .top-nav {
   background: rgba(244,247,251,0.85);
 }
 
+/* Desktop: nav-links sit centered on top of the nav bar */
 .nav-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
   display: flex;
-  gap: 24px;
+  justify-content: center;
   align-items: center;
+  gap: 24px;
+  z-index: 9999;
 }
 
 .nav-controls {
@@ -36,7 +45,7 @@ html {
   align-items: center;
 }
 
-/* Override fixed positioning when buttons live inside the nav */
+/* Override fixed positioning when buttons live inside nav-links */
 .nav-controls #theme-toggle,
 .nav-controls #lang-toggle {
   position: static;
@@ -45,25 +54,172 @@ html {
   transform: none;
 }
 
-.top-nav a {
+.nav-links a {
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.25s ease;
 }
 
-.top-nav a:hover {
+.nav-links a:hover {
   color: var(--accent);
 }
 
-.top-nav a.active {
+.nav-links a.active {
   color: var(--accent);
 }
 
-.top-nav a::after {
+.nav-links a::after {
   display: none;
 }
 
+/* -----------------------------------
+   HAMBURGER BUTTON (hidden on desktop)
+----------------------------------- */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(11,18,32,0.7);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  z-index: 10001;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+:root.light .hamburger {
+  background: rgba(244,247,251,0.7);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hamburger:hover {
+  border-color: var(--accent);
+}
+
+.hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger span + span {
+  margin-top: 4px;
+}
+
+/* Animate to X when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* -----------------------------------
+   MOBILE MENU
+----------------------------------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide desktop nav bar background */
+  .top-nav {
+    display: none;
+  }
+
+  /* Slide-down glassy panel */
+  .nav-links {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 220px;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 60px 0 16px;
+    border-radius: 16px;
+
+    /* Glassy premium effect */
+    background: rgba(11,18,32,0.55);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transform-origin: top left;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 10000;
+  }
+
+  :root.light .nav-links {
+    background: rgba(244,247,251,0.55);
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  :root.light .nav-links a {
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .nav-links a:last-of-type {
+    border-bottom: none;
+  }
+
+  /* Controls at bottom of mobile panel */
+  .nav-controls {
+    position: static;
+    transform: none;
+    justify-content: flex-start;
+    padding: 12px 24px 0;
+    gap: 10px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 4px;
+  }
+
+  :root.light .nav-controls {
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+}
+
+/* -----------------------------------
+   SCROLL TO TOP BUTTON
+----------------------------------- */
 #scrollTopBtn {
   position: fixed;
   bottom: 30px;
