@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You | Bithun Chatterjee</title>
+  <title>Takk | Bithun Chatterjee</title>
 
-  <!-- Apply saved theme BEFORE CSS loads --> 
-    <script>
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme === "light") {
-        document.documentElement.classList.add("light");
-      } else if (savedTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    </script>
+  <!-- Apply saved theme and language BEFORE CSS loads -->
+  <script>
+    {
+      const t = localStorage.getItem("theme");
+      if (t === "light") document.documentElement.classList.add("light");
+      else if (t === "dark") document.documentElement.classList.add("dark");
+      const l = localStorage.getItem("lang");
+      if (l) document.documentElement.lang = l;
+    }
+  </script>
 
   <!-- Theme + Styles -->
-  <link rel="stylesheet" href="assets/css/global.css"> 
-  <link rel="stylesheet" href="assets/css/themes.css"> 
-  <link rel="stylesheet" href="assets/css/theme-toggle.css"> 
-  <link rel="stylesheet" href="assets/css/buttons.css"> 
-  <link rel="stylesheet" href="assets/css/panels.css"> 
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/themes.css">
+  <link rel="stylesheet" href="assets/css/theme-toggle.css">
+  <link rel="stylesheet" href="assets/css/lang-toggle.css">
+  <link rel="stylesheet" href="assets/css/buttons.css">
+  <link rel="stylesheet" href="assets/css/panels.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/thankyou.css">
 
@@ -30,20 +32,24 @@
 
 <body>
 
-  <!-- Theme Toggle (same as main site) -->
-  <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+  <!-- Theme Toggle -->
+  <button type="button" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme" data-i18n-aria="aria.theme" data-i18n-title="title.theme">🌙</button>
+
+  <!-- Language Toggle -->
+  <button type="button" id="lang-toggle" aria-label="Switch to English" title="Switch to English" data-i18n-aria="aria.lang" data-i18n-title="title.lang">EN</button>
 
   <main>
     <section class="panel thankyou-panel">
-      <h1>Thank You!</h1>
-      <p>Your message has been successfully sent. I’ll get back to you as soon as possible.</p>
+      <h1 data-i18n="thankyou.h1">Takk!</h1>
+      <p data-i18n="thankyou.msg">Meldingen din er sendt. Jeg tar kontakt så snart som mulig.</p>
 
-      <a href="index.html" class="btn" style="margin-top:20px;">← Back to Home</a>
+      <a href="index.html" class="btn" style="margin-top:20px;" data-i18n="thankyou.back">← Tilbake til forsiden</a>
     </section>
   </main>
 
   <!-- Scripts -->
   <script src="assets/js/theme-toggle.js"></script>
+  <script src="assets/js/lang-toggle.js"></script>
   <script src="assets/js/script.js"></script>
 
 </body>

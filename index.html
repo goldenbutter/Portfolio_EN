@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
   <meta charset="utf-8" />
   <title>Bithun Chatterjee — Portfolio</title>
@@ -23,6 +23,7 @@
       <link rel="stylesheet" href="assets/css/chips.css">
       <link rel="stylesheet" href="assets/css/buttons.css">
       <link rel="stylesheet" href="assets/css/theme-toggle.css">
+      <link rel="stylesheet" href="assets/css/lang-toggle.css">
       <link rel="stylesheet" href="assets/css/panels.css">
       <link rel="stylesheet" href="assets/css/projects.css">
       <link rel="stylesheet" href="assets/css/techstack.css">
@@ -34,30 +35,35 @@
 
 <body>
   <nav class="top-nav">
-    <a href="#home" class="nav-link active">Home</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#resume" class="nav-link">Resume</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
-    <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+    <div class="nav-links">
+      <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a>
+      <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+      <a href="#resume" class="nav-link" data-i18n="nav.resume">Resume</a>
+      <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+      <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-controls">
+      <button type="button" id="lang-toggle" aria-label="Switch to English" title="Switch to English" data-i18n-aria="aria.lang" data-i18n-title="title.lang">EN</button>
+      <button type="button" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme" data-i18n-aria="aria.theme" data-i18n-title="title.theme">🌙</button>
+    </div>
   </nav>
 
   <div id="home"></div>
 
   <div class="wrapper">
-    
+
     <!-- Header -->
-    <header class="reveal">      
+    <header class="reveal">
 
       <div class="header-left">
-        <img class="avatar" src="assets/img/avatar-3.png" alt="Photo of Bithun Chatterjee" />
+        <img class="avatar" src="assets/img/avatar-3.png" alt="Photo of Bithun Chatterjee" data-i18n-alt="header.avatar.alt" />
         <div class="meta">
           <h1>Bithun Chatterjee</h1>
-          <p>Senior Technical Consultant — Oracle / SQL / PL/SQL · Data & ETL · DevOps</p>
+          <p data-i18n="header.subtitle">Senior Technical Consultant — Oracle / SQL / PL/SQL · Data &amp; ETL · DevOps</p>
 
           <div class="chips">
-            <span class="chip">Oracle SQL & PL/SQL</span>
-            <span class="chip">ETL & Data Pipelines</span>
+            <span class="chip">Oracle SQL &amp; PL/SQL</span>
+            <span class="chip">ETL &amp; Data Pipelines</span>
             <span class="chip">AWS / Azure</span>
             <span class="chip">Docker / Kubernetes</span>
             <span class="chip">CI/CD</span>
@@ -65,19 +71,19 @@
           </div>
 
           <div class="btn-row">
-            <a class="btn" href="assets/pdf/Bithun.Chatterjee_CV_2026.pdf" target="_blank" rel="noopener" >View CV</a>
-            <a class="btn" href="https://ai-evolution.ibithun.com/" target="_blank" rel="noopener">&#9889; My AI Journey</a>
+            <a class="btn" href="assets/pdf/Bithun.Chatterjee_CV_2026.pdf" target="_blank" rel="noopener" data-i18n="header.viewcv">View CV</a>
+            <a class="btn" href="https://ai-evolution.ibithun.com/" target="_blank" rel="noopener" data-i18n="header.aijourney">&#9889; My AI Journey</a>
           </div>
         </div>
       </div>
-        
+
     </header>
 
     <section id="skills" class="panel">
-      <h2>Tech Stack</h2>
+      <h2 data-i18n="section.techstack">Tech Stack</h2>
 
       <!-- Database -->
-      <h3 class="tech-category">Database</h3>
+      <h3 class="tech-category" data-i18n="tech.database">Database</h3>
       <div class="tech-grid">
         <div class="tech-item"><img src="assets/img/icons/oracle.svg" alt="Oracle"><span>Oracle</span></div>
         <div class="tech-item"><img src="assets/img/icons/snowflake.svg" alt="Snowflake"><span>Snowflake</span></div>
@@ -88,14 +94,14 @@
       </div>
 
       <!-- Cloud -->
-      <h3 class="tech-category">Cloud</h3>
+      <h3 class="tech-category" data-i18n="tech.cloud">Cloud</h3>
       <div class="tech-grid">
         <div class="tech-item"><img src="assets/img/icons/aws.svg" alt="AWS"><span>AWS</span></div>
         <div class="tech-item"><img src="assets/img/icons/Azure.svg" alt="Azure"><span>Azure</span></div>
       </div>
 
       <!-- IaC / DevOps -->
-      <h3 class="tech-category">DevOps / IaC</h3>
+      <h3 class="tech-category" data-i18n="tech.devops">DevOps / IaC</h3>
       <div class="tech-grid">
         <div class="tech-item"><img src="assets/img/icons/docker.svg" alt="Docker"><span>Docker</span></div>
         <div class="tech-item"><img src="assets/img/icons/kubernetes_color.svg" alt="Kubernetes"><span>Kubernetes</span></div>
@@ -108,7 +114,7 @@
       </div>
 
       <!-- Backend -->
-      <h3 class="tech-category">Backend</h3>
+      <h3 class="tech-category" data-i18n="tech.backend">Backend</h3>
       <div class="tech-grid">
         <div class="tech-item"><img src="assets/img/icons/nodejs.svg" alt="Node.js"><span>Node.js</span></div>
         <div class="tech-item"><img src="assets/img/icons/python.svg" alt="Python"><span>Python</span></div>
@@ -117,7 +123,7 @@
       </div>
 
       <!-- Frontend -->
-      <h3 class="tech-category">Frontend</h3>
+      <h3 class="tech-category" data-i18n="tech.frontend">Frontend</h3>
       <div class="tech-grid">
         <div class="tech-item"><img src="assets/img/icons/html.svg" alt="HTML"><span>HTML</span></div>
         <div class="tech-item"><img src="assets/img/icons/css.svg" alt="CSS"><span>CSS</span></div>
@@ -128,7 +134,7 @@
       </div>
 
       <!-- Others -->
-      <h3 class="tech-category">Others</h3>
+      <h3 class="tech-category" data-i18n="tech.others">Others</h3>
       <div class="tech-grid">
         <div class="tech-item"><img src="assets/img/icons/vscode.svg" alt="VS Code"><span>VS Code</span></div>
         <div class="tech-item"><img src="assets/img/icons/informatica.svg" alt="Informatica"><span>Informatica</span></div>
@@ -147,9 +153,9 @@
 
     <!-- Portfolio PDF -->
     <section id="resume" class="panel reveal">
-      <h2>Resume</h2>
+      <h2 data-i18n="section.resume">Resume</h2>
       <div class="pdf-wrap">
-        <iframe src="assets/pdf/Resume_Bithun_Chatterjee.pdf#view=fitH" title="Portfolio PDF"></iframe>
+        <iframe id="resume-pdf" src="assets/pdf/Resume_EN.pdf#view=fitH" title="Portfolio PDF"></iframe>
       </div>
     </section>
 
@@ -157,122 +163,154 @@
 
     <!-- Projects -->
     <section id="projects" class="panel reveal">
-      <h2>Projects</h2>
+      <h2 data-i18n="section.projects">Projects</h2>
 
       <div class="projects">
 
         <article class="card reveal">
-          <h3>Azure Cloud Migration from On‑Prem</h3>
+          <h3 data-i18n="project.1.title">Azure Cloud Migration from On&#8209;Prem</h3>
           <p>
-            <strong>Duration:</strong> 2024 – Present.<br>
-            Migrated 5 projects from on‑premises to Azure Cloud using multitenant architecture and advanced storage management.
+            <strong data-i18n="project.duration">Duration:</strong> 2024 – Present.<br>
+            <span data-i18n="project.1.desc">Migrated 5 projects from on&#8209;premises to Azure Cloud using multitenant architecture and advanced storage management.</span>
           </p>
         </article>
 
         <article class="card reveal">
-          <h3>Matrikkel‑Migration</h3>
+          <h3 data-i18n="project.2.title">Matrikkel&#8209;Migration</h3>
           <p>
-            <strong>Duration:</strong> 2023 – Present.<br>
-            Consolidated geodata from 63+ municipalities into a unified database during grid company mergers via Kartverket.
+            <strong data-i18n="project.duration">Duration:</strong> 2023 – Present.<br>
+            <span data-i18n="project.2.desc">Consolidated geodata from 63+ municipalities into a unified database during grid company mergers via Kartverket.</span>
           </p>
         </article>
 
         <article class="card reveal">
-          <h3>NRL Implementation Grid Companies</h3>
+          <h3 data-i18n="project.3.title">NRL Implementation Grid Companies</h3>
           <p>
-            <strong>Duration:</strong> 2023 – 2024.<br>
-            Delivered nationwide NRL rollout for 50+ grid companies, enabling standardized aviation‑obstacle reporting.
+            <strong data-i18n="project.duration">Duration:</strong> 2023 – 2024.<br>
+            <span data-i18n="project.3.desc">Delivered nationwide NRL rollout for 50+ grid companies, enabling standardized aviation&#8209;obstacle reporting.</span>
           </p>
         </article>
 
         <article class="card reveal">
-          <h3>Conversion of 2D to 3D Database Structures</h3>
+          <h3 data-i18n="project.4.title">Conversion of 2D to 3D Database Structures</h3>
           <p>
-            <strong>Duration:</strong> 2022 – 2024.<br>
-            Converted 2D database structures to 3D for 7 grid companies, enabling advanced height calculations.
+            <strong data-i18n="project.duration">Duration:</strong> 2022 – 2024.<br>
+            <span data-i18n="project.4.desc">Converted 2D database structures to 3D for 7 grid companies, enabling advanced height calculations.</span>
           </p>
         </article>
 
         <article class="card reveal">
-          <h3>Fasit Migration from MSSQL to Oracle</h3>
+          <h3 data-i18n="project.5.title">Fasit Migration from MSSQL to Oracle</h3>
           <p>
-            <strong>Duration:</strong> 2022 – 2023.<br>
-            Migrated Fasit system from MSSQL to Oracle, improving performance and scalability by 40%.
+            <strong data-i18n="project.duration">Duration:</strong> 2022 – 2023.<br>
+            <span data-i18n="project.5.desc">Migrated Fasit system from MSSQL to Oracle, improving performance and scalability by 40%.</span>
           </p>
         </article>
 
         <article class="card reveal">
-          <h3>Georydd Implementation for Geospatial Data Quality</h3>
+          <h3 data-i18n="project.6.title">Georydd Implementation for Geospatial Data Quality</h3>
           <p>
-            <strong>Duration:</strong> 2022 – 2023.<br>
-            Implemented Georydd for high-voltage pole data validation, achieving 95%+ accuracy.
+            <strong data-i18n="project.duration">Duration:</strong> 2022 – 2023.<br>
+            <span data-i18n="project.6.desc">Implemented Georydd for high-voltage pole data validation, achieving 95%+ accuracy.</span>
           </p>
         </article>
 
         <a href="https://github.com/goldenbutter/url-shortener-k8s" target="_blank" rel="noopener">
           <article class="card card-link reveal">
-            <h3>URL Shortener (FastAPI + Docker + Kubernetes)</h3>
+            <h3 data-i18n="project.7.title">URL Shortener (FastAPI + Docker + Kubernetes)</h3>
             <p>
-              <strong>Duration:</strong> 2026 – Present.<br>
-              Client → FastAPI Backend (Python) → In‑Memory Storage / Redis → Kind Cluster(Kubernetes in Docker)
+              <strong data-i18n="project.duration">Duration:</strong> 2026 – Present.<br>
+              <span data-i18n="project.7.desc">Client → FastAPI Backend (Python) → In&#8209;Memory Storage / Redis → Kind Cluster (Kubernetes in Docker)</span>
             </p>
-            <span class="card-badge">View on GitHub &rarr;</span>
+            <span class="card-badge" data-i18n="project.github">View on GitHub &rarr;</span>
           </article>
         </a>
 
         <a href="https://github.com/goldenbutter/microservice-demo" target="_blank" rel="noopener">
           <article class="card card-link reveal">
-            <h3>Microservice Demo (FastAPI + HTML/JS + Docker + Kubernetes)</h3>
+            <h3 data-i18n="project.8.title">Microservice Demo (FastAPI + HTML/JS + Docker + Kubernetes)</h3>
             <p>
-              <strong>Duration:</strong> 2026 – Present.<br>
-              Fullstack microservice using FastAPI, HTML/JS, Docker, Docker Compose & Kubernetes.
+              <strong data-i18n="project.duration">Duration:</strong> 2026 – Present.<br>
+              <span data-i18n="project.8.desc">Fullstack microservice using FastAPI, HTML/JS, Docker, Docker Compose &amp; Kubernetes.</span>
             </p>
-            <span class="card-badge">View on GitHub &rarr;</span>
+            <span class="card-badge" data-i18n="project.github">View on GitHub &rarr;</span>
           </article>
         </a>
 
         <a href="https://github.com/goldenbutter/golden.publication" target="_blank" rel="noopener">
           <article class="card card-link reveal">
-            <h3>Publications – Full‑Stack Demo (ASP.NET API + React SPA + Docker + Jenkins CI/CD)</h3>
+            <h3 data-i18n="project.9.title">Publications – Full&#8209;Stack Demo (ASP.NET API + React SPA + Docker + Jenkins CI/CD)</h3>
             <p>
-              <strong>Duration:</strong> 2026 – Present.<br>
-              ASP.NET API + React SPA + Docker + Nginx reverse proxy + Jenkins CI/CD pipeline.
+              <strong data-i18n="project.duration">Duration:</strong> 2026 – Present.<br>
+              <span data-i18n="project.9.desc">ASP.NET API + React SPA + Docker + Nginx reverse proxy + Jenkins CI/CD pipeline.</span>
             </p>
-            <span class="card-badge">View on GitHub &rarr;</span>
+            <span class="card-badge" data-i18n="project.github">View on GitHub &rarr;</span>
           </article>
         </a>
 
         <a href="https://github.com/goldenbutter/retail-store-sample-app/tree/gitops" target="_blank" rel="noopener">
           <article class="card card-link reveal">
-            <h3>Multi‑tier Web App on AWS with EKS & Ingress (ALB)</h3>
+            <h3 data-i18n="project.10.title">Multi&#8209;tier Web App on AWS with EKS &amp; Ingress (ALB)</h3>
             <p>
-              <strong>Duration:</strong> 2026 – Present.<br>
-              A Multi-tier Retail Store Application to demonstrate Kubernetes To Production with EKS + Terraform & GitOps With ArgoCD & GitHub Actions via Helm charts and ALB Ingress.
+              <strong data-i18n="project.duration">Duration:</strong> 2026 – Present.<br>
+              <span data-i18n="project.10.desc">A Multi-tier Retail Store Application to demonstrate Kubernetes To Production with EKS + Terraform &amp; GitOps With ArgoCD &amp; GitHub Actions via Helm charts and ALB Ingress.</span>
             </p>
-            <span class="card-badge">View on GitHub &rarr;</span>
+            <span class="card-badge" data-i18n="project.github">View on GitHub &rarr;</span>
           </article>
         </a>
 
         <a href="https://github.com/goldenbutter/devops-terraform-k8s-deployment" target="_blank" rel="noopener">
           <article class="card card-link reveal">
-            <h3>Terraform‑Provisioned Kubernetes Cluster (Scaling) + Sample App + Observability</h3>
+            <h3 data-i18n="project.11.title">Terraform&#8209;Provisioned Kubernetes Cluster (Scaling) + Sample App + Observability</h3>
             <p>
-              <strong>Duration:</strong> 2026 – Present.<br>
-              EKS+ AWS with a sample Go application, demonstrating infrastructure as code and container orchestration with HPA/VPA and observability with Prometheus and Grafana.
+              <strong data-i18n="project.duration">Duration:</strong> 2026 – Present.<br>
+              <span data-i18n="project.11.desc">EKS+ AWS with a sample Go application, demonstrating infrastructure as code and container orchestration with HPA/VPA and observability with Prometheus and Grafana.</span>
             </p>
-            <span class="card-badge">View on GitHub &rarr;</span>
+            <span class="card-badge" data-i18n="project.github">View on GitHub &rarr;</span>
           </article>
         </a>
 
         <a href="https://github.com/goldenbutter/wordpress-memory-limit-incident" target="_blank" rel="noopener">
           <article class="card card-link reveal">
-            <h3>WordPress Memory‑Limit Incident – CloudLinux + LiteSpeed + PHP Handler Debugging</h3>
+            <h3 data-i18n="project.12.title">WordPress Memory&#8209;Limit Incident – CloudLinux + LiteSpeed + PHP Handler Debugging</h3>
             <p>
-              <strong>Duration:</strong> 3 March – 12 March 2026.<br>
-              CloudLinux LVE + LiteSpeed + ALT‑PHP handler conflict causing WordPress to load with 128M memory.
-              Full root‑cause analysis, MU‑plugin fix, and performance improvement from 32% → 90%.
+              <strong data-i18n="project.duration">Duration:</strong> 3 March – 12 March 2026.<br>
+              <span data-i18n="project.12.desc">CloudLinux LVE + LiteSpeed + ALT&#8209;PHP handler conflict causing WordPress to load with 128M memory. Full root&#8209;cause analysis, MU&#8209;plugin fix, and performance improvement from 32% → 90%.</span>
             </p>
-            <span class="card-badge">View on GitHub &rarr;</span>
+            <span class="card-badge" data-i18n="project.github">View on GitHub &rarr;</span>
+          </article>
+        </a>
+
+        <a href="https://github.com/goldenbutter/mango.juice.project" target="_blank" rel="noopener">
+          <article class="card card-link reveal">
+            <h3 data-i18n="project.13.title">Mango Juice – Interactive 3D Scroll Experience (HTML5 Canvas)</h3>
+            <p>
+              <strong data-i18n="project.duration">Duration:</strong> March 2026.<br>
+              <span data-i18n="project.13.desc">A premium single-page landing site driving a 200-frame 3D animation sequence on HTML5 canvas. The scene responds in real time to both scroll position and mouse drag — no WebGL library required.</span>
+            </p>
+            <span class="card-badge" data-i18n="project.github">View on GitHub &rarr;</span>
+          </article>
+        </a>
+
+        <a href="https://github.com/goldenbutter/golden.grocery.cart" target="_blank" rel="noopener">
+          <article class="card card-link reveal">
+            <h3 data-i18n="project.14.title">Golden Grocery – Full&#8209;Stack Norwegian Store (REST API + Role&#8209;Based Auth)</h3>
+            <p>
+              <strong data-i18n="project.duration">Duration:</strong> March 2026.<br>
+              <span data-i18n="project.14.desc">Production-grade Norwegian grocery store app with a complete shopping flow from product browsing to order placement. Backed by a secure REST API with role-based authentication and a modern full-stack architecture.</span>
+            </p>
+            <span class="card-badge" data-i18n="project.github">View on GitHub &rarr;</span>
+          </article>
+        </a>
+
+        <a href="https://github.com/goldenbutter/orklaElveFiskeBooking" target="_blank" rel="noopener">
+          <article class="card card-link reveal">
+            <h3 data-i18n="project.15.title">Elvefisk Booking – Salmon Beat Demo Sites (Trøndelag)</h3>
+            <p>
+              <strong data-i18n="project.duration">Duration:</strong> March 2026.<br>
+              <span data-i18n="project.15.desc">Demo websites for salmon beat owners in the Trøndelag region, showcasing direct online booking as an alternative to third-party platforms — giving beat owners full control over their reservations.</span>
+            </p>
+            <span class="card-badge" data-i18n="project.github">View on GitHub &rarr;</span>
           </article>
         </a>
 
@@ -286,10 +324,11 @@
 
       <div class="contact-left">
         <h2 class="connect-title">
-          <span class="connect-lets">LET’S</span><br>
-          <span class="connect-connect">CONNECT.</span>
+          <span class="connect-lets" data-i18n="contact.lets">LET'S</span><br>
+          <span class="connect-connect" data-i18n="contact.connect">CONNECT.</span>
         </h2>
-        <p>Transforming complex data ecosystems with deep expertise in <strong>databases, ETL, cloud migration, automation</strong> and end‑to‑end <strong>performance optimization</strong>.</p>
+        <p data-i18n-html="contact.desc.html">An AI&#8209;augmented engineer who builds, orchestrates, and deploys <strong>multi&#8209;agent AI systems</strong> — turning weeks of work into days. Deep expertise in <strong>databases, ETL, cloud migration, automation</strong> and end&#8209;to&#8209;end <strong>performance optimization</strong>.</p>
+        <p class="connect-cta" data-i18n="contact.cta">Looking for someone who doesn't just use AI but architects entire agentic workflows? Let's talk.</p>
 
         <div class="contact-social">
           <a class="social-icon" href="https://www.linkedin.com/in/bithun-chatterjee-95911a1b/" target="_blank" rel="noopener">
@@ -299,42 +338,46 @@
             <img src="assets/img/icons/github.svg" alt="GitHub" title="GitHub">
           </a>
           <a class="social-icon" href="mailto:bithun.chatterjee@gmail.com">
-            <img src="assets/img/icons/mail.svg" alt="Email" title="Email"> 
+            <img src="assets/img/icons/mail.svg" alt="Email" title="Email">
+          </a>
+          <a class="social-icon" href="https://x.com/iBithun" target="_blank" rel="noopener">
+            <img src="assets/img/icons/x-twitter.svg" alt="X (Twitter)" title="X (Twitter)">
+          </a>
+          <a class="social-icon" href="https://www.facebook.com/goldenbutter007/" target="_blank" rel="noopener">
+            <img src="assets/img/icons/facebook.svg" alt="Facebook" title="Facebook">
+          </a>
+          <a class="social-icon" href="https://www.instagram.com/goldenbutter007/" target="_blank" rel="noopener">
+            <img src="assets/img/icons/instagram.svg" alt="Instagram" title="Instagram">
           </a>
         </div>
       </div>
 
       <div class="contact-right">
-        <form class="contact-form" action="https://formsubmit.co/bithun.chatterjee@gmail.com" method="POST">
-
-          <input type="hidden" name="_next" value="https://goldenbutter.github.io/Portfolio_EN/thankyou.html">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" style="display:none">
+        <form id="contact-form" class="contact-form">
 
           <div class="form-row">
             <div class="form-group">
-              <label for="contact-name">Name</label>
-              <input id="contact-name" type="text" name="name" placeholder="John Doe" required>
+              <label for="contact-name" data-i18n="contact.label.name">Name</label>
+              <input id="contact-name" type="text" name="name" placeholder="John Doe" required data-i18n-placeholder="contact.placeholder.name">
             </div>
 
             <div class="form-group">
-              <label for="contact-email">Email</label>
-              <input id="contact-email" type="email" name="email" placeholder="john@email.com" required>
+              <label for="contact-email" data-i18n="contact.label.email">Email</label>
+              <input id="contact-email" type="email" name="email" placeholder="john@email.com" required data-i18n-placeholder="contact.placeholder.email">
             </div>
           </div>
 
           <div class="form-group">
-            <label for="contact-subject">Subject</label>
-            <input id="contact-subject" type="text" name="subject" placeholder="Project Discussion" required>
+            <label for="contact-subject" data-i18n="contact.label.subject">Subject</label>
+            <input id="contact-subject" type="text" name="subject" placeholder="Project Discussion" required data-i18n-placeholder="contact.placeholder.subject">
           </div>
 
           <div class="form-group">
-            <label for="contact-message">Message</label>
-            <textarea id="contact-message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+            <label for="contact-message" data-i18n="contact.label.message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="How can I help you?" required data-i18n-placeholder="contact.placeholder.message"></textarea>
           </div>
 
-          <button type="submit" class="btn">Send Signal</button>
+          <button type="submit" class="btn" data-i18n="contact.send">Send Signal</button>
         </form>
       </div>
 
@@ -342,16 +385,21 @@
 
     <!-- Footer -->
     <footer>
-      <p>© <span id="year"></span> Bithun Chatterjee — All rights reserved.</p>
-      <p class="updated">Last updated: <span id="last-updated"></span></p>
+      <p>© <span id="year"></span> Bithun Chatterjee — <span data-i18n="footer.rights">All rights reserved.</span></p>
+      <p class="updated"><span data-i18n="footer.updated">Last updated:</span> <span id="last-updated"></span></p>
       <img src="https://hits.sh/goldenbutter.github.io/Portfolio_EN.svg?label=PROFILE%20VIEWS" alt="Profile views" />
     </footer>
   </div>
 
-  <button type="button" id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top">&#8593;</button>
+  <button type="button" id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top" data-i18n-aria="aria.scrolltop" data-i18n-title="title.scrolltop">&#8593;</button>
 
   <script src="assets/js/script.js"></script>
   <script src="assets/js/theme-toggle.js"></script>
+  <script src="assets/js/lang-toggle.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/contact.js"></script>
 
 </body>
 </html>

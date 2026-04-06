@@ -57,11 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
       modified = new Date();
     }
 
-    updatedSpan.textContent = modified.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric"
-    });
+    function formatDate() {
+      const locale = document.documentElement.lang === "nb" ? "nb-NO" : "en-US";
+      updatedSpan.textContent = modified.toLocaleDateString(locale, {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      });
+    }
+
+    formatDate();
+    document.addEventListener("languagechange", formatDate);
   }
 
   /* -----------------------------------
