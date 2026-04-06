@@ -1,0 +1,41 @@
+#lang-toggle {
+  position: fixed;
+  top: 0.2rem;
+  /* sit just left of #theme-toggle (right: calc(50% - 250px), ~50px wide, 8px gap) */
+  right: calc(50% - 250px + 58px);
+
+  z-index: 9999;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+#lang-toggle:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: var(--accent);
+}
+
+:root.light #lang-toggle {
+  background: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+:root.light #lang-toggle:hover {
+  border-color: var(--accent);
+}
+
+@media (max-width: 1200px) {
+  #lang-toggle {
+    right: 76px; /* 20px (theme) + ~48px (theme button) + 8px gap */
+  }
+}

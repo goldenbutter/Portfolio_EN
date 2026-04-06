@@ -12,12 +12,37 @@ html {
   padding: 12px 20px;
   display: flex;
   justify-content: center;
-  gap: 24px;
+  align-items: center;
   z-index: 9999;
 }
 
 :root.light .top-nav {
   background: rgba(244,247,251,0.85);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-controls {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Override fixed positioning when buttons live inside the nav */
+.nav-controls #theme-toggle,
+.nav-controls #lang-toggle {
+  position: static;
+  top: auto;
+  right: auto;
+  transform: none;
 }
 
 .top-nav a {
