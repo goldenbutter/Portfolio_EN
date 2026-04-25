@@ -154,7 +154,7 @@ const translations = {
     "project.1.desc": "Migrerte 5 prosjekter fra lokale servere til Azure Sky ved hjelp av multitenantarkitektur og avansert lagringsadministrasjon.",
 
     "project.2.title": "Matrikkel-migrering",
-    "project.2.desc": "Konsoliderte geodata fra 63+ kommuner i en samlet database under n\u00e6nettselskapssammensl\u00e5inger via Kartverket.",
+    "project.2.desc": "Konsoliderte geodata fra 63+ kommuner i en samlet database under nettselskapssammensl\u00e5inger via Kartverket.",
 
     "project.3.title": "NRL-implementering for nettselskaper",
     "project.3.desc": "Gjennomf\u00f8rte nasjonal NRL-utrulling for 50+ nettselskaper, som muliggj\u00f8r standardisert rapportering av luftfartshindre.",
