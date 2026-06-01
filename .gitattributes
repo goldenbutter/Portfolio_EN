@@ -1,0 +1,13 @@
+# Normalize all text files to LF in the repo and on checkout (cross-OS safe).
+* text=auto eol=lf
+
+# Known binary assets — never normalize.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+
+# SVGs are XML text — keep them LF.
+*.svg  text eol=lf
