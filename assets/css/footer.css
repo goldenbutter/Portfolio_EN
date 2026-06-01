@@ -23,3 +23,18 @@ footer .updated {
   text-align: center !important;
   color: var(--muted) !important;
 }
+
+/* iBithun attribution backlink (SEO authority link to the consulting site) */
+footer a.footer-brand {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+footer a.footer-brand:hover,
+footer a.footer-brand:focus-visible {
+  opacity: 0.8;
+  text-decoration: underline;
+}
