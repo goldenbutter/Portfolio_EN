@@ -10,6 +10,7 @@ const translations = {
     // Header
     "header.subtitle": "Senior Technical Consultant \u2014 Oracle / SQL / PL/SQL \u00b7 Data & ETL \u00b7 DevOps",
     "header.viewcv": "View CV",
+    "header.cv.href": "assets/pdf/Bithun.Chatterjee_CV_2026_EN.pdf",
     "header.aijourney": "\u26a1 My AI Journey",
     "header.avatar.alt": "Photo of Bithun Chatterjee",
 
@@ -128,6 +129,7 @@ const translations = {
     // Header
     "header.subtitle": "Senior teknisk konsulent \u2014 Oracle / SQL / PL/SQL \u00b7 Data & ETL \u00b7 DevOps",
     "header.viewcv": "Se CV",
+    "header.cv.href": "assets/pdf/Bithun.Chatterjee_CV_2026_NO.pdf",
     "header.aijourney": "\u26a1 Min AI-reise",
     "header.avatar.alt": "Bilde av Bithun Chatterjee",
 
@@ -277,6 +279,12 @@ function applyLanguage(lang) {
   document.querySelectorAll("[data-i18n-alt]").forEach(el => {
     const key = el.getAttribute("data-i18n-alt");
     if (t[key] !== undefined) el.setAttribute("alt", t[key]);
+  });
+
+  // href attributes (language-specific assets, e.g. the CV PDF)
+  document.querySelectorAll("[data-i18n-href]").forEach(el => {
+    const key = el.getAttribute("data-i18n-href");
+    if (t[key] !== undefined) el.setAttribute("href", t[key]);
   });
 
   // PDF iframe swap
