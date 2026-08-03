@@ -25,7 +25,7 @@ const translations = {
 
     // Resume
     "section.resume": "Resume",
-    "resume.pdf.src": "assets/pdf/Resume_EN.pdf#view=fitH",
+    "resume.pdf.src": "assets/pdf/Resume_EN.pdf#view=FitH",
     "resume.pdf.title": "Portfolio PDF",
 
     // Projects
@@ -144,7 +144,7 @@ const translations = {
 
     // Resume
     "section.resume": "CV",
-    "resume.pdf.src": "assets/pdf/Resume_NO.pdf#view=fitH",
+    "resume.pdf.src": "assets/pdf/Resume_NO.pdf#view=FitH",
     "resume.pdf.title": "CV PDF",
 
     // Projects
