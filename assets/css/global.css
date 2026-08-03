@@ -78,7 +78,17 @@ h3::after {
 ----------------------------------- */
 .pdf-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1.414;
+  /* An A4 page at the viewer's 100% zoom is 794px wide (595.5pt x 96/72) and
+     does not stretch. Capping the box just above that means the page fills it
+     whether the viewer honours #view=FitH or falls back to 100% — without the
+     cap, any leftover width shows up as grey bars either side of the page. */
+  max-width: 812px;
+  margin-inline: auto;
+  /* A4 ratio (1.4142) plus headroom for the browser's ~56px PDF toolbar.
+     The toolbar is a fixed height but the ratio is proportional, so this is
+     set slightly generous: erring high leaves a sliver of card background
+     below the page, erring low clips the page bottom. Covers widths >=653px. */
+  aspect-ratio: 1 / 1.50;
   border-radius: 16px;
   overflow: hidden;
   background: var(--card);
@@ -90,6 +100,12 @@ h3::after {
   height: 100%;
   border: 0;
   overflow: hidden;
+}
+
+/* The toolbar is a fixed height, so it eats a larger share of a smaller box —
+   give the page proportionally more room on narrow screens. Covers >=270px. */
+@media (max-width: 660px) {
+  .pdf-wrap { aspect-ratio: 1 / 1.62; }
 }
 
 /* -----------------------------------
